@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Bienvenue">Bienvenue au BrewDoGame</string>
+    <string name="cmoi">C\'est moi</string>
+    <string name="cautre">"C'est l'autre"</string>
+    <string name="launchparty">On balance la purée !</string>
+    <string name="addplayer">On aime partager</string>
+
+</resources>
