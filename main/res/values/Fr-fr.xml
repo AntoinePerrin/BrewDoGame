@@ -6,5 +6,6 @@
     <string name="launchparty">On balance la purée !</string>
     <string name="addplayer">On aime partager</string>
     <string name="errorNullPointer">Une erreur est apparu, merci de remplir les champs joueurs</string>
+    <string name="joueur">Joueur</string>
 
 </resources>

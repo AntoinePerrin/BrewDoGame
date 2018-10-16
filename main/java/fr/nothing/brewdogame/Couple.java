@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Couple {
-    ArrayList<String> Joueur;
+    ArrayList<String> Joueur = new ArrayList<>();
     int pointQ1, pointQ2, pointQ3;
 
     public Couple(String joueur1, String joueur2) {
@@ -26,25 +26,25 @@ public class Couple {
         return pointQ1;
     }
 
-    public void setPointQ1(int pointQ1) {
+    /*public void setPointQ1(int pointQ1) {
         this.pointQ1 = pointQ1;
-    }
+    }*/
 
     public int getPointQ2() {
         return pointQ2;
     }
 
-    public void setPointQ2(int pointQ2) {
+    /*public void setPointQ2(int pointQ2) {
         this.pointQ2 = pointQ2;
-    }
+    }*/
 
     public int getPointQ3() {
         return pointQ3;
     }
 
-    public void setPointQ3(int pointQ3) {
+    /*public void setPointQ3(int pointQ3) {
         this.pointQ3 = pointQ3;
-    }
+    }*/
 
     public void add1PointQ1(){
         this.pointQ1 += 1;
