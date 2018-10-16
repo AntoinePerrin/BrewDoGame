@@ -5,5 +5,6 @@
     <string name="cautre">"C'est l'autre"</string>
     <string name="launchparty">On balance la purée !</string>
     <string name="addplayer">On aime partager</string>
+    <string name="errorNullPointer">Une erreur est apparu, merci de remplir les champs joueurs</string>
 
 </resources>

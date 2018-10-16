@@ -6,8 +6,9 @@ public class Couple {
     ArrayList<String> Joueur;
     int pointQ1, pointQ2, pointQ3;
 
-    public Couple(ArrayList<String> joueur) {
-        Joueur = joueur;
+    public Couple(String joueur1, String joueur2) {
+        Joueur.add(joueur1);
+        Joueur.add(joueur2);
         this.pointQ1 = 0;
         this.pointQ2 = 0;
         this.pointQ3 = 0;

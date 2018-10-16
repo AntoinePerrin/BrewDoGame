@@ -4,13 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.AndroidException;
 import android.widget.TextView;
-import android.support.design.widget.TextInputLayout;
 import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
     private String  anciennequestion;
-    private int joueurid = 1, rank = 0, level = 0;
+    private int joueurid = 1, rank = 0, level = 0, groupeid = 1, nbCouple = 0;
     public ArrayList<Couple> groupeCouple;
+    public String joueurName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +19,11 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         if (b != null){
-            TextView joueur = findViewById(R.id.joueur);
-            joueur.setText(b.getInt("ListeCouple"));
-            //groupeCouple = b.get("ListeCouple");
+            joueurManager(b.getStringArrayList("ListeCouple"));
         }
+
+        TextView joueur = findViewById(R.id.joueur);
+        joueur.setText(joueurid);
 
         TextView titleBienvenue = findViewById(R.id.title);
         titleBienvenue.setText(R.string.Bienvenue);
@@ -37,6 +38,21 @@ public class MainActivity extends AppCompatActivity {
         TextView question = findViewById(R.id.question);
         question.setText(R.string.Bienvenue);
 
+    }
+
+    public void joueurManager (ArrayList<String> listeJoueur){
+        nbCouple = listeJoueur.size();
+        Couple temp;
+        String joueur1, joueur2;
+        Iterator<String> it = listeJoueur.iterator();
+        while (it.hasNext()) {
+            it.next();
+            joueur1 = it.toString();
+            it.next();
+            joueur2 = it.toString();
+            temp = new Couple(joueur1, joueur2);
+            groupeCouple.add(temp);
+        }
     }
 
     public void buttonMoi(android.view.View KGB) {
@@ -58,6 +74,16 @@ public class MainActivity extends AppCompatActivity {
             if (anciennequestion.equals(buttonJoue)) {
                 boisFunction(0);
                 anciennequestion = "";
+                if (level == 0){
+                    groupeCouple.get(groupeid).add1PointQ1();
+                }
+                if (level == 1){
+                    groupeCouple.get(groupeid).add1PointQ2();
+                }
+                if (level == 2){
+                    groupeCouple.get(groupeid).add1PointQ3();
+                }
+
             } else {
                 boisManager();
             }
@@ -89,14 +115,21 @@ public class MainActivity extends AppCompatActivity {
         TextView joueurTitle = findViewById(R.id.joueur);
         if (joueurid == 1) {
             joueurid = 2;
+            joueurName = groupeCouple.get(groupeid).Joueur.get(1);
         } else {
             joueurid = 1;
+            if (groupeid < nbCouple){
+                groupeid += 1;
+            } else {
+                groupeid = 0;
+            }
+            joueurName = groupeCouple.get(groupeid).Joueur.get(0);
         }
-        joueurTitle.setText(joueurid);
+        joueurTitle.setText(joueurName);
     }
 
     public void changeQuestion() {
-        int ligne = rank * 3 + level;
+        int ligne = rank + level * 50;
         //recupere la ligne dans le fichier
         TextView question = findViewById(R.id.question);
         String temp = "Plutot soumis ou dominant" + ligne;
