@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BrewDoGame</string>
+
+    <color name="backgroundcolor">#FFFFFF</color>
+    <color name="textColor">#000000</color>
+    <color name="hintColor">#000000</color>
+    <color name="buttonColor">#000000</color>
+    <color name="backgroundbutton">#DCDCDC</color>
 </resources>

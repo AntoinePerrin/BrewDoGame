@@ -5,10 +5,12 @@ import java.util.List;
 public class Couple {
     ArrayList<String> Joueur = new ArrayList<>();
     int pointQ1, pointQ2, pointQ3;
+    String nomEquipe;
 
-    public Couple(String joueur1, String joueur2) {
+    public Couple(String joueur1, String joueur2, String nomEquipev) {
         Joueur.add(joueur1);
         Joueur.add(joueur2);
+        this.nomEquipe = nomEquipev;
         this.pointQ1 = 0;
         this.pointQ2 = 0;
         this.pointQ3 = 0;
@@ -26,7 +28,10 @@ public class Couple {
         return pointQ1;
     }
 
-    /*public void setPointQ1(int pointQ1) {
+    public String getNomEquipe() {
+        return nomEquipe;
+    }
+/*public void setPointQ1(int pointQ1) {
         this.pointQ1 = pointQ1;
     }*/
 

@@ -3,9 +3,18 @@
     <string name="Bienvenue">Bienvenue au BrewDoGame</string>
     <string name="cmoi">C\'est moi</string>
     <string name="cautre">"C'est l'autre"</string>
-    <string name="launchparty">On balance la purée !</string>
-    <string name="addplayer">On aime partager</string>
-    <string name="errorNullPointer">Une erreur est apparu, merci de remplir les champs joueurs</string>
-    <string name="joueur">Joueur</string>
+    <string name="launchparty">Lancement du jeu</string>
+    <string name="addplayer">Ajout de l\'équipe</string>
+    <string name="errorNullPointer">Une erreur est apparue</string>
+    <string name="joueur">Nom du joueur</string>
+    <string name="errorEmptyPlayer">Un des joueurs n\'est pas rempli</string>
+    <string name="errorPasAssezJoueur">Il n\'y a pas assez de joueur</string>
+    <string name="metttre">"On veux se la mettre !"</string>
+    <string name="duplicate">"Un des joueurs est déjà renseigné"</string>
+    <string name="accesPoint">Détails points</string>
+    <string name="finPartie">Fin de partie</string>
+    <string name="nomEquipe">"Nom de l'équipe"</string>
 
+    <string name="Loser">"Pour les perdants Cul Sec, Bande de Loser !"</string>
+    <string name="fin">"C\'est la fin !"</string>
 </resources>
