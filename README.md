@@ -1,8 +1,13 @@
 # BrewDoGame
-Best alcool game in the universe because it was develop with a beer in hand !
+Best alcohol game of the universe because it was developed with a beer in hand !
 
-Idea by Elise Suard & Antoine Perrin-Valery
+Idea by Elise Suard & Antoine Perrin-Valery.
+
 Code by Antoine Perrin-Valery and illustrations by Elise Suard
+
+Proudly supported by a group of beer's lover called friends.
+
+If you have any question, problems or insult feel free to send us an email.
 
 /*
  * ----------------------------------------------------------------------------
